@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/widgets/custom_text.dart';
+import 'package:loan_asaan/widgets/custom_text.dart';
 
 class PageNotFound extends StatelessWidget {
   @override
@@ -8,12 +8,21 @@ class PageNotFound extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset("assets/images/error.png", width: 350,),
-          SizedBox(height: 10,),
+          Image.asset(
+            "assets/images/error.png",
+            width: 350,
+          ),
+          SizedBox(
+            height: 10,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CustomText(text: "Page not found", size: 24, weight: FontWeight.bold,),
+              CustomText(
+                text: "Page not found",
+                size: 24,
+                weight: FontWeight.bold,
+              ),
             ],
           )
         ],

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
-import 'package:flutter_web_dashboard/routing/routes.dart';
+import 'package:loan_asaan/constants/style.dart';
+import 'package:loan_asaan/routing/routes.dart';
 import 'package:get/get.dart';
 
 class MenuController extends GetxController {
   static MenuController instance = Get.find();
-  var activeItem = overviewPageDisplayName.obs;
+  var activeItem = homePageDisplayName.obs;
 
   var hoverItem = "".obs;
 
@@ -23,12 +23,18 @@ class MenuController extends GetxController {
 
   Widget returnIconFor(String itemName) {
     switch (itemName) {
-      case overviewPageDisplayName:
-        return _customIcon(Icons.trending_up, itemName);
-      case driversPageDisplayName:
-        return _customIcon(Icons.drive_eta, itemName);
-      case clientsPageDisplayName:
-        return _customIcon(Icons.people_alt_outlined, itemName);
+      case homePageDisplayName:
+        return _customIcon(Icons.home, itemName);
+      case loanPageDisplayName:
+        return _customIcon(Icons.person_outline_outlined, itemName);
+      case featurePageDisplayName:
+        return _customIcon(Icons.verified_outlined, itemName);
+      case facilitationPageDisplayName:
+        return _customIcon(Icons.smart_display_outlined, itemName);
+      case appoinmentPageDisplayName:
+        return _customIcon(Icons.miscellaneous_services_rounded, itemName);
+      case aboutPageDisplayName:
+        return _customIcon(Icons.contact_page_outlined, itemName);
       case authenticationPageDisplayName:
         return _customIcon(Icons.exit_to_app, itemName);
       default:

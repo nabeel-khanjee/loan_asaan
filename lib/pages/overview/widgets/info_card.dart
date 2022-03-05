@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:loan_asaan/constants/style.dart';
 
 class InfoCard extends StatelessWidget {
   final String title;
@@ -8,7 +8,13 @@ class InfoCard extends StatelessWidget {
   final bool isActive;
   final Function onTap;
 
-  const InfoCard({Key key,@required this.title,@required this.value, this.isActive = false,@required this.onTap, this.topColor})
+  const InfoCard(
+      {Key key,
+      @required this.title,
+      @required this.value,
+      this.isActive = false,
+      @required this.onTap,
+      this.topColor})
       : super(key: key);
 
   @override
@@ -23,10 +29,9 @@ class InfoCard extends StatelessWidget {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                offset: Offset(0, 6),
-                color: lightGrey.withOpacity(.1),
-                blurRadius: 12
-              )
+                  offset: Offset(0, 6),
+                  color: lightGrey.withOpacity(.1),
+                  blurRadius: 12)
             ],
             borderRadius: BorderRadius.circular(8),
           ),
@@ -34,7 +39,8 @@ class InfoCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Expanded(child: Container(
+                  Expanded(
+                      child: Container(
                     color: topColor ?? active,
                     height: 5,
                   ))
@@ -47,14 +53,14 @@ class InfoCard extends StatelessWidget {
                     TextSpan(
                         text: "$title\n",
                         style: TextStyle(
-                            fontSize: 16, color: isActive ? active : lightGrey)),
+                            fontSize: 16,
+                            color: isActive ? active : lightGrey)),
                     TextSpan(
                         text: "$value",
-                        style:
-                            TextStyle(fontSize: 40, color: isActive ? active : dark)),
+                        style: TextStyle(
+                            fontSize: 40, color: isActive ? active : dark)),
                   ])),
               Expanded(child: Container()),
-
             ],
           ),
         ),

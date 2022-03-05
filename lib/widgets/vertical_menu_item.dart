@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/controllers.dart';
+import 'package:loan_asaan/constants/controllers.dart';
 import 'package:get/get.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:loan_asaan/constants/style.dart';
 
 import 'custom_text.dart';
 
@@ -13,7 +13,6 @@ class VertticalMenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return InkWell(
         onTap: onTap,
         onHover: (value) {

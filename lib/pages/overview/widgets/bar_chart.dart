@@ -1,7 +1,7 @@
 /// Bar chart example
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:loan_asaan/constants/style.dart';
 
 class SimpleBarChart extends StatelessWidget {
   final List<charts.Series> seriesList;
@@ -14,16 +14,16 @@ class SimpleBarChart extends StatelessWidget {
     return new SimpleBarChart(
       _createSampleData(),
       // Disable animations for image tests.
-      animate: false,
+      animate: true,
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
     return new charts.BarChart(
       seriesList,
       animate: animate,
+      animationDuration: Duration(seconds: 5),
     );
   }
 
@@ -37,7 +37,6 @@ class SimpleBarChart extends StatelessWidget {
       new OrdinalSales('23 Jun', 15),
       new OrdinalSales('22 Jun', 85),
       new OrdinalSales('21 Jun', 45),
-
     ];
 
     return [

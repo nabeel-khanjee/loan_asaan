@@ -1,15 +1,23 @@
 const rootRoute = "/";
 
-const overviewPageDisplayName = "Overview";
-const overviewPageRoute = "/overview";
+const homePageDisplayName = "Home";
+const homePageRoute = "/home";
 
-const driversPageDisplayName = "Drivers";
-const driversPageRoute = "/drivers";
+const loanPageDisplayName = "Loan";
+const loanPageRoute = "/loan";
 
-const clientsPageDisplayName = "Clients";
-const clientsPageRoute = "/clients";
+const featurePageDisplayName = "Featured Services";
+const featuredPageRoute = "/featured";
 
-const authenticationPageDisplayName = "Log out";
+const facilitationPageDisplayName = "Facilitation Centers";
+const facilitationPageRoute = "/facilitation";
+
+const appoinmentPageDisplayName = "Appoinment";
+const appoinmentPageRoute = "/appoinment";
+const aboutPageDisplayName = "About";
+const aboutPageRoute = "/about";
+
+const authenticationPageDisplayName = "Login";
 const authenticationPageRoute = "/auth";
 
 class MenuItem {
@@ -19,11 +27,13 @@ class MenuItem {
   MenuItem(this.name, this.route);
 }
 
-
-
 List<MenuItem> sideMenuItemRoutes = [
- MenuItem(overviewPageDisplayName, overviewPageRoute),
- MenuItem(driversPageDisplayName, driversPageRoute),
- MenuItem(clientsPageDisplayName, clientsPageRoute),
+  MenuItem(homePageDisplayName, homePageRoute),
+  MenuItem(loanPageDisplayName, loanPageRoute),
+  MenuItem(featurePageDisplayName, featuredPageRoute),
+  MenuItem(facilitationPageDisplayName, facilitationPageRoute),
+  MenuItem(appoinmentPageDisplayName, appoinmentPageRoute),
+  MenuItem(aboutPageDisplayName, aboutPageRoute),
+  
  MenuItem(authenticationPageDisplayName, authenticationPageRoute),
 ];
